@@ -4,7 +4,7 @@
     <img src="https://cdn1.iconfinder.com/data/icons/minicons-4/64/ledger-512.png" width="100"/>
   </a>
 
-<h1 align="center">ledger-ethereum</h1>
+<h1 align="center">ledger-litecoin</h1>
 
 <p align="center">
     A Flutter plugin to scan, connect & sign transactions using Ledger Nano devices using USB & BLE
@@ -20,9 +20,9 @@
 
 ## Overview
 
-Ledger Nano devices are the perfect hardware wallets for managing your crypto & NFTs on the go.
+Ledger Nano devices are the perfect hardware wallets for managing your crypto on the go.
 This Flutter package is a plugin for the [ledger_flutter](https://pub.dev/packages/ledger_flutter) package to get accounts and sign transactions using the 
-Ethereum blockchain.
+Litecoin and Bitcoin Cash blockchains.
 
 ### Supported devices
 
@@ -36,17 +36,17 @@ Ethereum blockchain.
 Install the latest version of this package via pub.dev:
 
 ```yaml
-ledger_ethereum: ^latest-version
+ledger_litcoin: ^latest-version
 ```
 
 For integration with the Ledger Flutter package, check out the documentation [here](https://pub.dev/packages/ledger_flutter).
 
 ### Setup
 
-Create a new instance of an `EthereumLedgerApp` and pass an instance of your `Ledger` object.
+Create a new instance of an `LitecoinLedgerApp` and pass an instance of your `Ledger` object.
 
 ```dart
-final app = EthereumLedgerApp(ledger);
+final app = LitecoinLedgerApp(ledger);
 ```
 
 ## Usage
