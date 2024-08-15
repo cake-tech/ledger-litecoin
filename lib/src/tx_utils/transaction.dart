@@ -42,8 +42,7 @@ class Transaction {
     final inputs = <TransactionInput>[];
 
     for (var i = 0; i < inputCount; i++) {
-      final prevout = reader.readSlice(32);
-      reader.readUInt32();
+      final prevout = reader.readSlice(36);
       final script = reader.readVarSlice();
       final sequence = reader.readSlice(4);
 
@@ -70,6 +69,7 @@ class Transaction {
       }
     }
 
+    reader.offset = reader.buffer.length - 4;
     final locktime = reader.readSlice(4);
 
     return Transaction(

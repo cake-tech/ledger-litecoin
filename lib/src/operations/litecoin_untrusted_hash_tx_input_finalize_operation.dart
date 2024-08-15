@@ -6,6 +6,7 @@ import 'package:ledger_litecoin/src/ledger/litecoin_instructions.dart';
 import 'package:ledger_litecoin/src/tx_utils/constants.dart';
 import 'package:ledger_litecoin/src/utils/bip32_path_helper.dart';
 import 'package:ledger_litecoin/src/utils/bip32_path_to_buffer.dart';
+import 'package:ledger_litecoin/src/utils/string_uint8list_extension.dart';
 
 /// This command is used to compose an opaque SHA-256 hash from the transaction outputs.
 /// This command is rejected if all inputs advertised at the beginning of the
@@ -72,6 +73,8 @@ class LitecoinUntrustedHashTxInputFinalizeOperation
       responses.add(dataWriter.toBytes());
       offset += blockSize;
     }
+
+    print('$runtimeType ${responses.map((e) => e.toPaddedHexString())}');
     return responses;
   }
 }

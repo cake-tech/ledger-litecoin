@@ -27,7 +27,7 @@ abstract class LedgerInputOperation<T> extends LedgerOperation<T> {
       ..writeUint8(inputData.length)
       ..write(inputData);
 
-    print("${runtimeType.toString()} Final Sending Data ${writer.toBytes().map((e) => e.toRadixString(16)).toList()}");
+    print("${runtimeType.toString()} Final Sending Data ${writer.toBytes().map((e) => e.toRadixString(16).padLeft(2, "0")).join()}");
     return [writer.toBytes()];
   }
 }

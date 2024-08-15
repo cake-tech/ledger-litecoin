@@ -61,6 +61,7 @@ class LitecoinUntrustedHashSignOperation
     writer.writeUint32(lockTime);
     writer.write([sigHashType]);
 
+    print("${runtimeType.toString()} Data ${writer.toBytes().map((e) => e.toRadixString(16).padLeft(2, "0")).join()}");
     return writer.toBytes();
   }
 }

@@ -61,10 +61,6 @@ Future<String> getTrustedInput(
   for (final input in transaction.inputs) {
     final data = Uint8List.fromList([
       ...input.prevout,
-      0x0,
-      0x0,
-      0x0,
-      0x0,
       ...varint.encode(input.script.length).buffer
     ]);
 

@@ -24,13 +24,6 @@ class LitecoinTransformer extends LedgerTransformer {
       throw LedgerException(errorCode: errorCode);
     }
 
-    final output = <Uint8List>[];
-
-    for (final data in transform) {
-      final offset = (data.length >= 2) ? 2 : 0;
-      output.add(data.sublist(0, data.length - offset));
-    }
-
-    return Uint8List.fromList(output.expand((e) => e).toList());
+    return Uint8List.fromList(transform.expand((e) => e).toList());
   }
 }
