@@ -1,7 +1,6 @@
 import 'dart:typed_data';
 
 import 'package:ledger_flutter/ledger_flutter.dart';
-import 'package:ledger_litecoin/src/ledger/ledger_input_operation.dart';
 import 'package:ledger_litecoin/src/ledger/litecoin_instructions.dart';
 import 'package:ledger_litecoin/src/tx_utils/constants.dart';
 import 'package:ledger_litecoin/src/utils/bip32_path_helper.dart';
